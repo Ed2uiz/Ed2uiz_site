@@ -1,0 +1,5 @@
+Running list of talks, seminars, or presentations that I’ve given.
+
+# 2024
+
+-   [dbverse: composable database libraries for larger-than-memory scientific analytics](https://rpubs.com/Ed2uiz/dbverse-duckCon2024), DuckCon 2024, Seattle, WA. August 2024

@@ -1,0 +1,63 @@
+---
+title: '<i class="bi bi-github"></i> Open Source'
+description: Open source projects I've been involved with.
+image: ""
+sidebar: false
+listing: 
+  - id: dbverse-listings
+    contents: dbverse.yml
+    type: table
+    sort-ui: false
+    filter-ui: false
+    categories: false
+    fields: 
+    - project
+    - description
+    - role
+    - other
+    field-links:
+    - project
+    field-display-names:
+      project: Project
+      description: Description
+      role: Role
+      other: "Other References"
+  - id: giotto-listings
+    contents: giotto.yml
+    type: table
+    sort-ui: false
+    filter-ui: false
+    categories: false
+    fields: 
+    - project
+    - description
+    - role
+    - other
+    field-links:
+    - project
+    field-display-names:
+      project: Project
+      description: Description
+      role: Role
+      other: "Other References"
+---
+
+<br>
+
+## dbverse
+
+I am the creator and lead developer of  [dbverse](https://github.com/drieslab/dbverse), a metalibrary for large-scale scientific data analysis in a database.
+
+::: {#dbverse-listings}
+:::
+
+## ![](./images/GiottoLogo.png){width="8%"} Giotto Suite
+
+I am a core contributor and co-developer of [Giotto Suite](https://github.com/drieslab/Giotto), a modular suite of R packages for multi-scale and multi-omic spatial omics analysis. 
+
+::: {#giotto-listings}
+:::
+
+## Credit
+
+This page is heavily inspired by the page of the same name by [Hamel Husain](https://github.com/hamelsmu/hamel-site).

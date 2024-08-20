@@ -1,0 +1,112 @@
+---
+title: "Recap of Summer 2024 conference visits in Seattle, WA"
+subtitle: "Posit 2024 and DuckCon #5"
+author: "Eddie Ruiz"
+date: "2024-08-20"
+categories: ["blog", "posit", "duckCon"]
+image: "thumbnail.jpg"
+toc: true
+draft: false
+cache: true
+---
+
+# Overview
+This is a quick and dirty report/recap on my experience attending Posit 2024 and presenting at DuckCon 2024 in Seattle,WA from Aug 11-16, 2024. 
+
+**TLDR**: I enjoyed meeting many amazing people, learned a lot , Seattle is very bonita.
+
+# Posit 2024: "Databases with R" workshop
+- [Link to official Github Repo for workshop content ](https://github.com/posit-conf-2024/databases/)
+
+### Highlights
+-  Use `.by` in `summarize()` to avoid using  `group_by` and `ungroup` which many people forget
+-  [`Jetbrains Mono`](https://www.jetbrains.com/lp/mono/) font
+	-  Pretty font for Rstudio! 
+		-  `<- |> !=` are rendered into nice glyphs!
+			- ![](db44b315300841c1ad1db1fc50bbd0dc.png)
+-  [`gaborcsardi/prompt`](https://github.com/gaborcsardi/prompt)
+	-  a package for pimpin' your R console. I added a lightning bolt to mine because I'm cool like that.
+	-  `prompt::set_prompt('⚡ > ')`
+		-  ![](3f6e9c4f066449faa2fa01e0752ae88b.png)
+-  [`ddotta/parquetize`](https://github.com/ddotta/parquetize)
+	-  This R package contains handy functions to export data from a variety of sources into .parquet files! It has convenient arguments to accommodate memory limitations and other constraints that can be very useful
+		-  `{arrow}` and `{duckdb}` already offer ways to do this but there are several args that `{parquetize}`  supports that these don't
+-  [`exasol` ](https://aws.amazon.com/marketplace/pp/prodview-lkdvwqobetjzu) database
+	-  We did not cover this database in the workshop, but I learned about it for the first time here (even though it's been around for quite some time). 
+- [ `cynkra/constructive`](https://github.com/cynkra/constructive)
+	-  Kirilll used `constructive::construct()` to print out the contents of an R object that contained SQL. It parsed the SQL into the console nicely.  I had never heard of `dput` before this but `construct` supposedly achieves similar functionality. seems handy for objects that have a lot of SQL in it. 
+-  [CORA dataset](https://relational.fel.cvut.cz/dataset/CORA)
+	-  Public dataset in MariaDB with plenty of examples of primary and foreign keys and good 'data modeling'.
+	-  This dataset was covered as an example of how to access a DB through R/DBI with credentials. 
+-  `r"()"`
+	-  Beginning with R 4.0, you can use the following syntax `r"()"` to construct raw string literals, this can be handy when writing SQL as alternatives to use `{glue}` (one less dependency) or `paste0()`. You don't have to escape special characters like `/` or `\` which can be especially handy for writing file paths.
+-  ... much more that I do not have time to cover in this post. Check out the excellent lecture material at the link above.
+
+###  Closing thoughts
+-  Despite covering a lot of material, this workshop was great. I thought it was well organized and informative. I learned a lot despite already knowing a bit about databases/R. Kirill included several visualizations of the concepts we were learning which made it easier to appreciate how they built on top of each other (one example shown below)!
+ ![](6c0941d838484439886dd735c9b30217.png)
+-  There were several exercises that were included in the workshop that can be found on the Github repo. I thought these were quite helpful and recommend trying these out to refresh your knowledge on the many different ways to interact with databases in R. Oftentimes there are many ways to do the same thing.
+
+# DuckCon 2024
+When I wasn't attending posit, I was spending all of my time preparing for my lightning talk at DuckCon2024. I will write a dedicated blog post (and preprint) on this topic very soon, so stay tuned! But here are some of my quick thoughts. 
+
+## Summary
+I had an amazing time at DuckCon. The speakers were great and the venue was really impressive -- the screen was huge! After the talks, everyone was invited to gather in the venue for drinks and snacks. I was approached by several kind people and was overwhelmed by how many were interested in my talk. I want to again thank everyone for their interest and I hope to share more on our work very soon.
+
+## Highlight
+-  Earlier in the week at the Posit Databases Workshop, I invited Kirill to my DuckCon talk. Unforutuntaly, he mentioned that there was a conflict with an R tidy event and so he would not likely be able to attend. To my surprise, I found Kirill after my talk at DuckCon! We managed to find some time to chat outside and I really enjoyed being able to discuss our projects in more detail. I thanked him for all of the incredible contributions he and his team at cynrka has made to R (i.e. maintaining the duckdb-r repo, creating duckplyr, and much more related to his work leading [cynkra](https://github.com/cynkra)).
+
+::: {#fig-duckcon-kirill fig-align="center" .unnumbered}
+![](c078ded7445c4d3f96c0b52599eee6ff.jpg)
+
+Kirill Müller (right) and I (left) sporting Posit 2024 t-shirts at DuckCon #5 in Seattle, WA with another Posit workshop instructor (center).
+:::
+
+# Old friends, new friends, and celebrities
+## New Friends
+I've always wondered why academics enjoy attending conferences so much. After attending posit conference, I can now say with confidence that the best part is bumping into other people from other walks of life and learning about their unique background and shared interests. I was lucky to have such an experience when randomly meeting [Jeroen Huyghe](https://research.fredhutch.org/peters/en/team.html), a principal staff scientist at Fred Hutch who does some exciting research on spatial omics and cancer. Jeroen and I bonded over our shared interests in spatial omics at Posit conf and I'm very grateful to have had the opportunity to have lunch with him and learn about his experiences in the spatial omics field, working at Fred Hutch, and discussing the need for better methods for spatial omics analysis. It was a pleasure meeting you Jeroen, hope we can cross paths again in the future!
+
+## Old Friends
+At the Posit databases workshop, I had the opportunity to connect with  Nick Giangrecco, an old friend and mentor of mine from my good ol days at Columbia. It was great to spend time with you Nick, learn more about our shared interests with DuckDB, and catching up over dumplings. Hope to see you again soon! 
+
+It was also great to see Tyrone Lee at both Posit and DuckCon. Thanks Tyrone for your encouragement ahead of my DuckCon talk and for the helpful suggestions.
+
+## Celebrities
+
+In this section I fanboy over some of the amazing people that I met at Posit and DuckCon. Apologies if I forgot to mention you.
+
+### Posit Conf
+In the databases workshop, I was surrounded by several R celebrities including Eric Nantz (https://r-podcast.org/host/enantz/) and Tyler Morgan Wall (https://www.tylermw.com/), among many others! I was also lucky to have sat besides Joe Chang, Hadley Wickham, and JJ Allaire at lunch! 
+
+### DuckCon 
+- Hannes Mühleisen and Mark Raasveldt, Co-founders of DuckDB.
+	- I was very fortunate to meet Hannes and Mark before and after the DuckCon talks. I regret not talking more about DuckDB internals with them, but I hope to meet you again soon Hannes and Mark!
+- Jordan Tigani, CEO of MotherDuck
+	- I was lucky to have sat beside Jordan at DuckCon.  I got to pitch a few ideas to Jordan about doing matrix arithmetic with Motherduck, and hear more about the recent pivot from 'hybrid execution' to 'dual execution'. Shoutout to Frances Perry from Motherduck who gave a great talk, showcasing several new features with Motherduck that I'd like to soon try out.
+- Dominik Moritz, creator of Mosaic and Prof at CMU
+	- Briefly met Dominik outside of the venue, huge fan of his work and hope to soon support ways to use Mosaic with `dbverse` objects
+- And several others...
+
+::: {#fig-duckcon-dinner fig-align="center" .unnumbered}
+![](3f1cf2d281ec41358dcf2fd8c9cf1920.jpg)
+
+Obligatory DuckCon speaker dinner selfie at Tavolàta Capitol Hill. Thanks Joe for the great dinner conversations!
+:::
+
+
+# Next steps
+- Road to v0.1
+	- We released `dbMatrix` and `dbSpatial` at DuckCon2024 as 'developer previews' with much work yet to do. Below are some changes I will be working on in the coming weeks towards our first 0.1 release.
+	- Release `dbData` 
+		- `dbData` will contain shared helper functions across `dbverse` objects (e.g. caching and saving `dbverse` objects).
+		- I'm also excited to explore inheriting `duckplyr` in `dbData` 
+			- Issue #86 in `duckplyr` was recently resolved by Kirill. Now, users can take existing `tbl_dbi` objects and convert them into the `duckplyr` framework via `as_duckplyr_tibble()`!
+	- `dbMatrix`
+		- Stabilize `Arith()` and `Ops()` methods
+		- Support div by 0 operations
+		- Update show() methods
+	- `dbSpatial`
+		- S7 rewrite (TBD)
+- `dbverse` preprint
+- `GiottoDB`
+	- WIP: [drieslab/GiottoDB](https://github.com/drieslab/GiottoDB)

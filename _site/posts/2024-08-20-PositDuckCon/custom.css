@@ -1,0 +1,3 @@
+.quarto-figure-caption::before {
+  content: none !important;
+}

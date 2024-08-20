@@ -1,0 +1,25 @@
+---
+title: ""
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+::: {.profile-header layout="[21,79]"}
+![](portrait.jpg){.profile-pic}
+
+I am a research scientist with over ten years of experience in the fields of genomics, stem cells, and computational biology. My current research focuses on *spatial omics* and the development of open source software to analyze large-scale scientific datasets. You can learn more about my research on my [Google Scholar page](https://scholar.google.com/citations?user=K900TXsAAAAJ&hl=en) and my open source contributions on my [GitHub](https://github.com/Ed2uiz) or the [Open Source page](oss/opensource.qmd). I am currently a [Hariri Institute Graduate Student Fellow](https://www.bu.edu/hic/profile/edward-ruiz/) and Ph.D. Candidate at Boston University in the [Dries Lab](https://www.drieslab.com/).
+:::
+
+------------------------------------------------------------------------
+
+## Blog Posts
+
+::: {#blog-listings}
+:::

@@ -1,0 +1,20 @@
+- project: "dbverse ![GitHub Repo stars](https://img.shields.io/github/stars/drieslab/dbverse?style=social)"
+  path: https://github.com/drieslab/dbverse
+  role: Creator
+  other: "[Slides](https://rpubs.com/Ed2uiz/dbverse-duckCon2024), [Talk](https://rpubs.com/Ed2uiz/dbverse-duckCon2024)"
+  description: |
+    An ecosystem of database libraries for larger-than-memory scientific analytics.
+
+- project: "dbMatrix ![GitHub Repo stars](https://img.shields.io/github/stars/drieslab/dbMatrix?style=social)"
+  path: https://github.com/drieslab/dbMatrix
+  role: Creator
+  other: ""
+  description: |
+    A database library for larger-than-memory matrix operations.
+
+- project: "dbSpatial ![GitHub Repo stars](https://img.shields.io/github/stars/drieslab/dbSpatial?style=social)"
+  path: https://github.com/drieslab/dbSpatial
+  role: Creator
+  other: ""
+  description: |
+    A database library for larger-than-memory spatial operations.

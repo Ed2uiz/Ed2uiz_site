@@ -1,0 +1,18 @@
+---
+title: "Contact"
+image: portrait.jpg
+about:
+  template: jolla
+  links:
+    - icon: ✉️ Email
+      text: ✉️ Email
+      href: mailto:ecr7407@gmail.com
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/Ed2uiz
+    - icon: github
+      text: Github
+      href: https://github.com/Ed2uiz
+---
+
+Happy to chat about any matters regarding my research or past work. I'm particularly interested in connecting with other researchers or scientists, feel free to email or DM me with any questions!

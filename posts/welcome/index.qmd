@@ -1,0 +1,9 @@
+---
+title: "Welcome To My Blog"
+date: "2024-08-17"
+categories: [news]
+---
+
+![](thumbnail.jpg)
+
+I've created a Quarto website in the spirit of writing more technical blogs about my research. I also hope to share my experiences with my colleagues. I hope you enjoy it!

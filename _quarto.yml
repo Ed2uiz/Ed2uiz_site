@@ -1,0 +1,31 @@
+project:
+  type: website
+
+website:
+  title: ""
+  navbar:
+    title: false
+    background: dark
+    pinned: false
+    collapse: false
+    left:
+    - text: "Blog"
+      href: index.qmd
+    - text: Open Source
+      file: oss/opensource.qmd
+    - text: CV
+      href: cv.qmd
+    right:
+      - text: Contact
+        file: about.qmd
+      - icon: github
+        href: https://github.com/Ed2uiz
+      - icon: twitter
+        href: https://twitter.com/Ed2uiz
+format:
+  html:
+    theme: Darkly
+    css: styles.css
+
+editor: source
+

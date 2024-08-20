@@ -1,0 +1,27 @@
+- project: "Giotto ![GitHub Repo stars](https://img.shields.io/github/stars/drieslab/Giotto?style=social)"
+  path: https://github.com/drieslab/Giotto
+  role: Core Contributor
+  other: ""
+  description: |
+    Spatial omics analysis toolbox
+
+- project: "GiottoClass ![GitHub Repo stars](https://img.shields.io/github/stars/drieslab/GiottoClass?style=social)"
+  path: https://github.com/drieslab/GiottoClass
+  role: Core Contributor
+  other: ""
+  description: |
+    Giotto object and subobject class definitions and frameworks
+
+- project: "GiottoUtils ![GitHub Repo stars](https://img.shields.io/github/stars/drieslab/GiottoUtils?style=social)"
+  path: https://github.com/drieslab/GiottoUtils
+  role: Core Contributor
+  other: ""
+  description: |
+    GiottoUtils exports functionalities that are called internally by many of the other packages in the Giotto ecosystem
+
+- project: "GiottoDB ![GitHub Repo stars](https://img.shields.io/github/stars/drieslab/GiottoDB?style=social)"
+  path: https://github.com/drieslab/GiottoDB
+  role: Co-creator, Core Contributor
+  other: ""
+  description: |
+    GiottoDB contains classes from the dbverse for working with larger-than-memory spatial omics data
