@@ -46,7 +46,7 @@
     "href": "posts/2024-08-20-PositDuckCon/index.html#highlight",
     "title": "Recap of Summer 2024 conference visits in Seattle, WA",
     "section": "Highlight",
-    "text": "Highlight\n\nEarlier in the week at the Posit Databases Workshop, I invited Kirill to my DuckCon talk. Unforutuntaly, he mentioned that there was a conflict with an R tidy event and so he would not likely be able to attend. To my surprise, I found Kirill after my talk at DuckCon! We managed to find some time to chat outside and I really enjoyed being able to discuss our projects in more detail. I thanked him for all of the incredible contributions he and his team at cynrka has made to R (i.e. maintaining the duckdb-r repo, creating duckplyr, and much more related to his work leading cynkra).\n\n\n\n\nFigure 1: Kirill Müller (right) and I (left) sporting Posit 2024 t-shirts at DuckCon #5 in Seattle, WA with another Posit workshop instructor (center)."
+    "text": "Highlight\n\nEarlier in the week at the Posit Databases Workshop, I invited Kirill to my DuckCon talk. Unfortunately, he mentioned that there was a conflict with an R tidy event and so he would not likely be able to attend. To my surprise, I found Kirill after my talk at DuckCon! We managed to find some time to chat outside and I really enjoyed being able to discuss our projects in more detail. I thanked him for all of the incredible contributions he has made to R (i.e. maintaining the duckdb-r repo, creating duckplyr, and much more related to his work leading cynkra).\n\n\n\n\nFigure 1: Kirill Müller (right) and I (left) sporting Posit 2024 t-shirts at DuckCon #5 in Seattle, WA with another Posit workshop instructor (center)."
   },
   {
     "objectID": "posts/2024-08-20-PositDuckCon/index.html#new-friends",
@@ -60,7 +60,7 @@
     "href": "posts/2024-08-20-PositDuckCon/index.html#old-friends",
     "title": "Recap of Summer 2024 conference visits in Seattle, WA",
     "section": "Old Friends",
-    "text": "Old Friends\nAt the Posit databases workshop, I had the opportunity to connect with Nick Giangrecco, an old friend and mentor of mine from my good ol days at Columbia. It was great to spend time with you Nick, learn more about our shared interests with DuckDB, and catching up over dumplings. Hope to see you again soon!\nIt was also great to see Tyrone Lee at both Posit and DuckCon. Thanks Tyrone for your encouragement ahead of my DuckCon talk and for the helpful suggestions."
+    "text": "Old Friends\nAt the Posit databases workshop, I had the opportunity to connect with Nick Giangrecco, an old friend and mentor of mine from my good ol days at Columbia. It was great to spending time with you Nick, learning more about our shared interests with DuckDB, and catching up over dumplings. Hope to see you again soon!\nIt was also great to see Tyrone Lee at both Posit and DuckCon. Thanks Tyrone for your encouragement ahead of my DuckCon talk and for the helpful suggestions."
   },
   {
     "objectID": "posts/2024-08-20-PositDuckCon/index.html#celebrities",
@@ -95,7 +95,7 @@
     "href": "oss/opensource.html#giotto-suite",
     "title": " Open Source",
     "section": " Giotto Suite",
-    "text": "Giotto Suite\nI am a core contributor and co-developer of Giotto Suite, a modular suite of R packages for multi-scale and multi-omic spatial omics analysis.\n\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\nGiotto \n\n\nSpatial omics analysis toolbox \n\n\nCore Contributor\n\n\n\n\n\n\n\nGiottoClass \n\n\nGiotto object and subobject class definitions and frameworks \n\n\nCore Contributor\n\n\n\n\n\n\n\nGiottoUtils \n\n\nGiottoUtils exports functionalities that are called internally by many of the other packages in the Giotto ecosystem \n\n\nCore Contributor\n\n\n\n\n\n\n\nGiottoDB \n\n\nGiottoDB contains classes from the dbverse for working with larger-than-memory spatial omics data \n\n\nCo-creator, Core Contributor\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Giotto Suite\nI am a core contributor and co-developer of Giotto Suite, a modular suite of R packages for multi-scale and multi-omic spatial analysis.\n\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\nGiotto \n\n\nSpatial omics analysis toolbox \n\n\nCore Contributor\n\n\n\n\n\n\n\nGiottoClass \n\n\nGiotto object and subobject class definitions and frameworks \n\n\nCore Contributor\n\n\n\n\n\n\n\nGiottoUtils \n\n\nGiottoUtils exports functionalities that are called internally by many of the other packages in the Giotto ecosystem \n\n\nCore Contributor\n\n\n\n\n\n\n\nGiottoDB \n\n\nGiottoDB contains classes from the dbverse for working with larger-than-memory spatial omics data \n\n\nCo-creator, Core Contributor\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "oss/opensource.html#credit",
