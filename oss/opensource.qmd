@@ -53,7 +53,7 @@ I am the creator and lead developer of  [dbverse](https://github.com/drieslab/db
 
 ## ![](./images/GiottoLogo.png){width="8%"} Giotto Suite
 
-I am a core contributor and co-developer of [Giotto Suite](https://github.com/drieslab/Giotto), a modular suite of R packages for multi-scale and multi-omic spatial omics analysis. 
+I am a core contributor and co-developer of [Giotto Suite](https://github.com/drieslab/Giotto), a modular suite of R packages for multi-scale and multi-omic spatial analysis. 
 
 ::: {#giotto-listings}
 :::

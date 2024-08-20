@@ -1,24 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "",
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "TODO",
     "section": "",
-    "text": "I am a research scientist with over ten years of experience in the fields of genomics, stem cells, and computational biology. My current research focuses on spatial omics and the development of open source software to analyze large-scale scientific datasets. You can learn more about my research on my Google Scholar page and my open source contributions on my GitHub or the Open Source page. I am currently a Hariri Institute Graduate Student Fellow and Ph.D. Candidate at Boston University in the Dries Lab."
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "I’ve created a Quarto website in the spirit of writing more technical blogs about my research. I also hope to share my experiences with my colleagues. I hope you enjoy it!"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+    "text": "TODO"
   },
   {
     "objectID": "about.html",
@@ -28,27 +14,6 @@
     "text": "Happy to chat about any matters regarding my research or past work. I’m particularly interested in connecting with other researchers or scientists, feel free to email or DM me with any questions!"
   },
   {
-    "objectID": "index.html#get-in-touch",
-    "href": "index.html#get-in-touch",
-    "title": "Ed2uiz",
-    "section": "💼 Get In Touch",
-    "text": "💼 Get In Touch\nDo you need help operationalizing ML or large language models? I’m open to new consulting work and other forms of advisory. If you need help with your project, send me a brief email at hamel@parlance-labs.com"
-  },
-  {
-    "objectID": "index.html#feed",
-    "href": "index.html#feed",
-    "title": "Ed2uiz",
-    "section": "📮 Feed",
-    "text": "📮 Feed\nI often share my experience building AI products. Below is a selected assortment of my longer-form writing on my machine learning work."
-  },
-  {
-    "objectID": "index.html#blog-posts",
-    "href": "index.html#blog-posts",
-    "title": "",
-    "section": "Blog Posts",
-    "text": "Blog Posts"
-  },
-  {
     "objectID": "talks/talks.html",
     "href": "talks/talks.html",
     "title": "2024",
@@ -56,60 +21,67 @@
     "text": "Running list of talks, seminars, or presentations that I’ve given.\n\n2024\n\ndbverse: composable database libraries for larger-than-memory scientific analytics, DuckCon 2024, Seattle, WA. August 2024"
   },
   {
-    "objectID": "oss/opensource.html",
-    "href": "oss/opensource.html",
-    "title": " Open Source",
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
     "section": "",
-    "text": "I’ve contributed to projects such as dbverse and Giotto Suite."
+    "text": "I’ve created a Quarto website in the spirit of writing more technical blogs about my research. I also hope to share my experiences with my colleagues. I hope you enjoy it!"
   },
   {
-    "objectID": "oss/opensource.html#axolotl",
-    "href": "oss/opensource.html#axolotl",
-    "title": " Open Source",
-    "section": " Axolotl",
-    "text": "Axolotl\nI am a core contributor to Axolotl, a library for efficient fine-tuning of large language models. I also wrote an in-depth debugging guide for Axolotl."
+    "objectID": "posts/2024-08-20-PositDuckCon/index.html",
+    "href": "posts/2024-08-20-PositDuckCon/index.html",
+    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
+    "section": "",
+    "text": "This is a quick and dirty report/recap on my experience attending Posit 2024 and presenting at DuckCon 2024 in Seattle,WA from Aug 11-16, 2024.\nTLDR: I enjoyed meeting many amazing people, learned a lot , Seattle is very bonita."
   },
   {
-    "objectID": "oss/opensource.html#fastai",
-    "href": "oss/opensource.html#fastai",
-    "title": " Open Source",
-    "section": " fastai",
-    "text": "fastai\nI maintain and contribute to a variety of fastai projects. Below are the projects I’ve been very involved in:\n\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\n\n\nNo matching items"
+    "objectID": "posts/2024-08-20-PositDuckCon/index.html#summary",
+    "href": "posts/2024-08-20-PositDuckCon/index.html#summary",
+    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
+    "section": "Summary",
+    "text": "Summary\nI had an amazing time at DuckCon. The speakers were great and the venue was really impressive – the screen was huge! After the talks, everyone was invited to gather in the venue for drinks and snacks. I was approached by several kind people and was overwhelmed by how many were interested in my talk. I want to again thank everyone for their interest and I hope to share more on our work very soon."
   },
   {
-    "objectID": "oss/opensource.html#metaflow",
-    "href": "oss/opensource.html#metaflow",
-    "title": " Open Source",
-    "section": " Metaflow",
-    "text": "Metaflow\nI created notebook cards: A tool that allows you to use notebooks to generate reports, visualizations and diagnostics in Metaflow production workflows. Blog"
+    "objectID": "posts/2024-08-20-PositDuckCon/index.html#highlight",
+    "href": "posts/2024-08-20-PositDuckCon/index.html#highlight",
+    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
+    "section": "Highlight",
+    "text": "Highlight\n\nEarlier in the week at the Posit Databases Workshop, I invited Kirill to my DuckCon talk. Unforutuntaly, he mentioned that there was a conflict with an R tidy event and so he would not likely be able to attend. To my surprise, I found Kirill after my talk at DuckCon! We managed to find some time to chat outside and I really enjoyed being able to discuss our projects in more detail. I thanked him for all of the incredible contributions he has made to R (i.e. maintaining the duckdb-r repo, creating duckplyr, and much more related to his work leading cynkra).\n\n\n\n\nFigure 1: Kirill Müller (right) and I (left) sporting Posit 2024 t-shirts at DuckCon #5 in Seattle, WA with another Posit workshop instructor (center)."
   },
   {
-    "objectID": "oss/opensource.html#kubeflow",
-    "href": "oss/opensource.html#kubeflow",
-    "title": " Open Source",
-    "section": " Kubeflow",
-    "text": "Kubeflow\nI’ve worked on several projects related to Kubeflow, mainly around examples and documentation:\n\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\n\n\nNo matching items"
+    "objectID": "posts/2024-08-20-PositDuckCon/index.html#new-friends",
+    "href": "posts/2024-08-20-PositDuckCon/index.html#new-friends",
+    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
+    "section": "New Friends",
+    "text": "New Friends\nI’ve always wondered why academics enjoy attending conferences so much. After attending posit conference, I can now say with confidence that the best part is bumping into other people from other walks of life and learning about their unique background and shared interests. I was lucky to have such an experience when randomly meeting Jeroen Huyghe, a principal staff scientist at Fred Hutch who does some exciting research on spatial omics and cancer. Jeroen and I bonded over our shared interests in spatial omics at Posit conf and I’m very grateful to have had the opportunity to have lunch with him and learn about his experiences in the spatial omics field, working at Fred Hutch, and discussing the need for better methods for spatial omics analysis. It was a pleasure meeting you Jeroen, hope we can cross paths again in the future!"
   },
   {
-    "objectID": "oss/opensource.html#jupyter",
-    "href": "oss/opensource.html#jupyter",
-    "title": " Open Source",
-    "section": " Jupyter",
-    "text": "Jupyter\nI created the Repo2Docker GitHub Action, which allows you to trigger repo2docker to build a Jupyter enabled Docker images from your GitHub repository. This Action allows you to pre-cache images for your own BinderHub cluster or for mybinder.org.\nThis project was accepted into the official JupyterHub GitHub org."
+    "objectID": "posts/2024-08-20-PositDuckCon/index.html#old-friends",
+    "href": "posts/2024-08-20-PositDuckCon/index.html#old-friends",
+    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
+    "section": "Old Friends",
+    "text": "Old Friends\nAt the Posit databases workshop, I had the opportunity to connect with Nick Giangrecco, an old friend and mentor of mine from my good ol days at Columbia. It was great to spending time with you Nick, learning more about our shared interests with DuckDB, and catching up over dumplings. Hope to see you again soon!\nIt was also great to see Tyrone Lee at both Posit and DuckCon. Thanks Tyrone for your encouragement ahead of my DuckCon talk and for the helpful suggestions."
   },
   {
-    "objectID": "oss/opensource.html#great-expectations",
-    "href": "oss/opensource.html#great-expectations",
-    "title": " Open Source",
-    "section": " Great Expectations",
-    "text": "Great Expectations\nI developed the Great Expectations GitHub Action that allows you to use Great Expectations in CI/CD Workflows. Blog."
+    "objectID": "posts/2024-08-20-PositDuckCon/index.html#celebrities",
+    "href": "posts/2024-08-20-PositDuckCon/index.html#celebrities",
+    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
+    "section": "Celebrities",
+    "text": "Celebrities\nIn this section I fanboy over some of the amazing people that I met at Posit and DuckCon. Apologies if I forgot to mention you.\n\nPosit Conf\nIn the databases workshop, I was surrounded by several R celebrities including Eric Nantz (https://r-podcast.org/host/enantz/) and Tyler Morgan Wall (https://www.tylermw.com/), among many others! I was also lucky to have sat besides Joe Chang, Hadley Wickham, and JJ Allaire at lunch!\n\n\nDuckCon\n\nHannes Mühleisen and Mark Raasveldt, Co-founders of DuckDB.\n\nI was very fortunate to meet Hannes and Mark before and after the DuckCon talks. I regret not talking more about DuckDB internals with them, but I hope to meet you again soon Hannes and Mark!\n\nJordan Tigani, CEO of MotherDuck\n\nI was lucky to have sat beside Jordan at DuckCon. I got to pitch a few ideas to Jordan about doing matrix arithmetic with Motherduck, and hear more about the recent pivot from ‘hybrid execution’ to ‘dual execution’. Shoutout to Frances Perry from Motherduck who gave a great talk, showcasing several new features with Motherduck that I’d like to soon try out.\n\nDominik Moritz, creator of Mosaic and Prof at CMU\n\nBriefly met Dominik outside of the venue, huge fan of his work and hope to soon support ways to use Mosaic with dbverse objects\n\nAnd several others…\n\n\n\n\nFigure 2: Obligatory DuckCon speaker dinner selfie at Tavolàta Capitol Hill. Thanks Joe for the great dinner conversations!"
   },
   {
-    "objectID": "oss/opensource.html#other",
-    "href": "oss/opensource.html#other",
-    "title": " Open Source",
-    "section": " Other",
-    "text": "Other\nI worked as a staff machine learning engineer at GitHub from 2017 - 2022. I led or created the following open source projects that explored the intersection of machine learning, data and the developer workflow:\n\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\n\n\nNo matching items"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "I am a research scientist with over ten years of experience in the fields of genomics, stem cells, and computational biology. My current research focuses on spatial omics and the development of open source software to analyze large-scale scientific datasets. You can learn more about my research on my Google Scholar page and my open source contributions on my GitHub or the Open Source page. I am currently a Hariri Institute Graduate Student Fellow and Ph.D. Candidate at Boston University in the Dries Lab."
+  },
+  {
+    "objectID": "index.html#blog-posts",
+    "href": "index.html#blog-posts",
+    "title": "",
+    "section": "Blog Posts",
+    "text": "Blog Posts"
   },
   {
     "objectID": "oss/opensource.html#dbverse",
@@ -131,68 +103,5 @@
     "title": " Open Source",
     "section": "Credit",
     "text": "Credit\nThis page is heavily inspired by the page of the same name by Hamel Husain."
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "TODO",
-    "section": "",
-    "text": "TODO"
-  },
-  {
-    "objectID": "posts/2024-08-20-PositDuckCon/index.html",
-    "href": "posts/2024-08-20-PositDuckCon/index.html",
-    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
-    "section": "",
-    "text": "This is a quick and dirty report/recap on my experience attending Posit 2024 and presenting at DuckCon 2024 in Seattle,WA from Aug 11-16, 2024.\nTLDR: I enjoyed meeting many amazing people, learned a lot , Seattle is very bonita."
-  },
-  {
-    "objectID": "posts/2024-08-20-PositDuckCon/index.html#new-friends",
-    "href": "posts/2024-08-20-PositDuckCon/index.html#new-friends",
-    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
-    "section": "New Friends",
-    "text": "New Friends\nI’ve always wondered why academics enjoy attending conferences so much. After attending posit conference, I can now say with confidence that the best part is bumping into other people from other walks of life and learning about their unique background and shared interests. I was lucky to have such an experience when randomly meeting Jeroen Huyghe, a principal staff scientist at Fred Hutch who does some exciting research on spatial omics and cancer. Jeroen and I bonded over our shared interests in spatial omics at Posit conf and I’m very grateful to have had the opportunity to have lunch with him and learn about his experiences in the spatial omics field, working at Fred Hutch, and discussing the need for better methods for spatial omics analysis. It was a pleasure meeting you Jeroen, hope we can cross paths again in the future!"
-  },
-  {
-    "objectID": "posts/2024-08-20-PositDuckCon/index.html#old-friends",
-    "href": "posts/2024-08-20-PositDuckCon/index.html#old-friends",
-    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
-    "section": "Old Friends",
-    "text": "Old Friends\nAt the Posit databases workshop, I had the opportunity to connect with Nick Giangrecco, an old friend and mentor of mine from my good ol days at Columbia. It was great to spend time with you Nick, learn more about our shared interests with DuckDB, and catching up over dumplings. Hope to see you again soon!\nIt was also great to see Tyrone Lee at both Posit and DuckCon. Thanks Tyrone for your encouragement ahead of my DuckCon talk and for the helpful suggestions."
-  },
-  {
-    "objectID": "posts/2024-08-20-PositDuckCon/index.html#celebrities",
-    "href": "posts/2024-08-20-PositDuckCon/index.html#celebrities",
-    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
-    "section": "Celebrities",
-    "text": "Celebrities\nIn this section I fanboy over some of the amazing people that I met at Posit and DuckCon. Apologies if I forgot to mention you.\n\nPosit Conf\nIn the databases workshop, I was surrounded by several R celebrities including Eric Nantz (https://r-podcast.org/host/enantz/) and Tyler Morgan Wall (https://www.tylermw.com/), among many others! I was also lucky to have sat besides Joe Chang, Hadley Wickham, and JJ Allaire at lunch!\n\n\nDuckCon\n\nHannes Mühleisen and Mark Raasveldt, Co-founders of DuckDB.\n\nI was very fortunate to meet Hannes and Mark before and after the DuckCon talks. I regret not talking more about DuckDB internals with them, but I hope to meet you again soon Hannes and Mark!\n\nJordan Tigani, CEO of MotherDuck\n\nI was lucky to have sat beside Jordan at DuckCon. I got to pitch a few ideas to Jordan about doing matrix arithmetic with Motherduck, and hear more about the recent pivot from ‘hybrid execution’ to ‘dual execution’. Shoutout to Frances Perry from Motherduck who gave a great talk, showcasing several new features with Motherduck that I’d like to soon try out.\n\nDominik Moritz, creator of Mosaic and Prof at CMU\n\nBriefly met Dominik outside of the venue, huge fan of his work and hope to soon support ways to use Mosaic with dbverse objects\n\nAnd several others…\n\n\n\n\nFigure 2: Obligatory DuckCon speaker dinner selfie at Tavolàta Capitol Hill. Thanks Joe for the great dinner conversations!"
-  },
-  {
-    "objectID": "posts/2024-08-20-PositDuckCon/index.html#highlights",
-    "href": "posts/2024-08-20-PositDuckCon/index.html#highlights",
-    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
-    "section": "Highlights",
-    "text": "Highlights\n\nUse .by in summarize() to avoid using group_by and ungroup which many people forget\nJetbrains Mono font\n\nPretty font for Rstudio!\n\n&lt;- |&gt; != are rendered into nice glyphs!\n\n\n\n\n\ngaborcsardi/prompt\n\na package for pimpin’ your R console. I added a lightning bolt to mine because I’m cool like that.\nprompt::set_prompt('⚡ &gt; ')\n\n\n\n\nddotta/parquetize\n\nThis R package contains handy functions to export data from a variety of sources into .parquet files! It has convenient arguments to accommodate memory limitations and other constraints that can be very useful\n\n{arrow} and {duckdb} already offer ways to do this but there are several args that {parquetize} supports that these don’t\n\n\nexasol database\n\nWe did not cover this database in the workshop, but I learned about it for the first time here (even though it’s been around for quite some time).\n\ncynkra/constructive\n\nKirilll used constructive::construct() to print out the contents of an R object that contained SQL. It parsed the SQL into the console nicely. I had never heard of dput before this but construct supposedly achieves similar functionality. seems handy for objects that have a lot of SQL in it.\n\nCORA dataset\n\nPublic dataset in MariaDB with plenty of examples of primary and foreign keys and good ‘data modeling’.\nThis dataset was covered as an example of how to access a DB through R/DBI with credentials.\n\nr\"()\"\n\nBeginning with R 4.0, you can use the following syntax r\"()\" to construct raw string literals, this can be handy when writing SQL as alternatives to use {glue} (one less dependency) or paste0(). You don’t have to escape special characters like / or \\ which can be especially handy for writing file paths.\n\n… much more that I do not have time to cover in this post. Check out the excellent lecture material at the link above. ## Remarks\nDespite covering a lot of material, this workshop was great. I thought it was well organized and informative. I learned a lot despite already knowing a bit about databases/R. Kirill included several visualizations of the concepts we were learning which made it easier to appreciate how they built on top of each other (one example shown below)! \nThere were several exercises that were included in the workshop that can be found on the Github repo. I thought these were quite helpful and recommend trying these out to refresh your knowledge on the many different ways to interact with databases in R. Oftentimes there are many ways to do the same thing."
-  },
-  {
-    "objectID": "posts/2024-08-20-PositDuckCon/index.html#duckcon2024",
-    "href": "posts/2024-08-20-PositDuckCon/index.html#duckcon2024",
-    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
-    "section": "DuckCon2024",
-    "text": "DuckCon2024\n\nSummary\n\nAttending DuckCon was an amazing experience. The speakers were great and the venue was really impressive – the screen was huge! After the talks, everyone was invited to gather in the venue for drinks and snacks. I was approached by several really kind people and was overwhelmed by how many were interested in my talk! I want to again thank everyone for their interest and I hope to share more on our work very soon. As a researcher, it’s not always clear how wide-reaching our projects can be, it’s often not the goal of our work, and there’s always some level of pressure to do research that can be funded (even when there’s no guarantee this will happen). So hearing that my project is of interest to others and that it could even be of use, is very encouraging.\n\n\n\nHighlight\n\nEarlier in the week at the Databases workshop at Posit conf, I invited Kirill to my DuckCon talk but he mentioned that there was a conflict with a tidy thursday event and so he would not likely be able to attend. To my surprise, I found Kirill after my talk at DuckCon! We managed to find some time to chat outside and I really enjoyed being able to discuss our projects in more detail. I made sure to shower Kirill with many thanks for all of the incredible contributions he has made for R (i.e. maintaining the duckdb-r repo, creating duckplyr, and much more related to his work leading cynkra). Thanks again Kirill for all you and your team do for R.\n\n\n\n\n\n\nMeeting Kirill Müller after DuckCon\n\n\nFigure 1: Meeting Kirill Müller after DuckCon"
-  },
-  {
-    "objectID": "posts/2024-08-20-PositDuckCon/index.html#summary",
-    "href": "posts/2024-08-20-PositDuckCon/index.html#summary",
-    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
-    "section": "Summary",
-    "text": "Summary\nI had an amazing time at DuckCon. The speakers were great and the venue was really impressive – the screen was huge! After the talks, everyone was invited to gather in the venue for drinks and snacks. I was approached by several kind people and was overwhelmed by how many were interested in my talk. I want to again thank everyone for their interest and I hope to share more on our work very soon."
-  },
-  {
-    "objectID": "posts/2024-08-20-PositDuckCon/index.html#highlight",
-    "href": "posts/2024-08-20-PositDuckCon/index.html#highlight",
-    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
-    "section": "Highlight",
-    "text": "Highlight\n\nEarlier in the week at the Posit Databases Workshop, I invited Kirill to my DuckCon talk. Unforutuntaly, he mentioned that there was a conflict with an R tidy event and so he would not likely be able to attend. To my surprise, I found Kirill after my talk at DuckCon! We managed to find some time to chat outside and I really enjoyed being able to discuss our projects in more detail. I thanked him for all of the incredible contributions he and his team at cynrka has made to R (i.e. maintaining the duckdb-r repo, creating duckplyr, and much more related to his work leading cynkra).\n\n\n\n\nFigure 1: Kirill Müller (right) and I (left) sporting Posit 2024 t-shirts at DuckCon #5 in Seattle, WA with another Posit workshop instructor (center)."
   }
 ]
