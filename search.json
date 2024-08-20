@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "TODO",
+    "section": "",
+    "text": "TODO"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Happy to chat about any matters regarding my research or past work. I’m particularly interested in connecting with other researchers or scientists, feel free to email or DM me with any questions!"
+  },
+  {
+    "objectID": "talks/talks.html",
+    "href": "talks/talks.html",
+    "title": "2024",
+    "section": "",
+    "text": "Running list of talks, seminars, or presentations that I’ve given.\n\n2024\n\ndbverse: composable database libraries for larger-than-memory scientific analytics, DuckCon 2024, Seattle, WA. August 2024"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "I’ve created a Quarto website in the spirit of writing more technical blogs about my research. I also hope to share my experiences with my colleagues. I hope you enjoy it!"
+  },
+  {
+    "objectID": "posts/2024-08-20-PositDuckCon/index.html",
+    "href": "posts/2024-08-20-PositDuckCon/index.html",
+    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
+    "section": "",
+    "text": "This is a quick and dirty report/recap on my experience attending Posit 2024 and presenting at DuckCon 2024 in Seattle,WA from Aug 11-16, 2024.\nTLDR: I enjoyed meeting many amazing people, learned a lot , Seattle is very bonita."
+  },
+  {
+    "objectID": "posts/2024-08-20-PositDuckCon/index.html#summary",
+    "href": "posts/2024-08-20-PositDuckCon/index.html#summary",
+    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
+    "section": "Summary",
+    "text": "Summary\nI had an amazing time at DuckCon. The speakers were great and the venue was really impressive – the screen was huge! After the talks, everyone was invited to gather in the venue for drinks and snacks. I was approached by several kind people and was overwhelmed by how many were interested in my talk. I want to again thank everyone for their interest and I hope to share more on our work very soon."
+  },
+  {
+    "objectID": "posts/2024-08-20-PositDuckCon/index.html#highlight",
+    "href": "posts/2024-08-20-PositDuckCon/index.html#highlight",
+    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
+    "section": "Highlight",
+    "text": "Highlight\n\nEarlier in the week at the Posit Databases Workshop, I invited Kirill to my DuckCon talk. Unforutuntaly, he mentioned that there was a conflict with an R tidy event and so he would not likely be able to attend. To my surprise, I found Kirill after my talk at DuckCon! We managed to find some time to chat outside and I really enjoyed being able to discuss our projects in more detail. I thanked him for all of the incredible contributions he and his team at cynrka has made to R (i.e. maintaining the duckdb-r repo, creating duckplyr, and much more related to his work leading cynkra).\n\n\n\n\nFigure 1: Kirill Müller (right) and I (left) sporting Posit 2024 t-shirts at DuckCon #5 in Seattle, WA with another Posit workshop instructor (center)."
+  },
+  {
+    "objectID": "posts/2024-08-20-PositDuckCon/index.html#new-friends",
+    "href": "posts/2024-08-20-PositDuckCon/index.html#new-friends",
+    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
+    "section": "New Friends",
+    "text": "New Friends\nI’ve always wondered why academics enjoy attending conferences so much. After attending posit conference, I can now say with confidence that the best part is bumping into other people from other walks of life and learning about their unique background and shared interests. I was lucky to have such an experience when randomly meeting Jeroen Huyghe, a principal staff scientist at Fred Hutch who does some exciting research on spatial omics and cancer. Jeroen and I bonded over our shared interests in spatial omics at Posit conf and I’m very grateful to have had the opportunity to have lunch with him and learn about his experiences in the spatial omics field, working at Fred Hutch, and discussing the need for better methods for spatial omics analysis. It was a pleasure meeting you Jeroen, hope we can cross paths again in the future!"
+  },
+  {
+    "objectID": "posts/2024-08-20-PositDuckCon/index.html#old-friends",
+    "href": "posts/2024-08-20-PositDuckCon/index.html#old-friends",
+    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
+    "section": "Old Friends",
+    "text": "Old Friends\nAt the Posit databases workshop, I had the opportunity to connect with Nick Giangrecco, an old friend and mentor of mine from my good ol days at Columbia. It was great to spend time with you Nick, learn more about our shared interests with DuckDB, and catching up over dumplings. Hope to see you again soon!\nIt was also great to see Tyrone Lee at both Posit and DuckCon. Thanks Tyrone for your encouragement ahead of my DuckCon talk and for the helpful suggestions."
+  },
+  {
+    "objectID": "posts/2024-08-20-PositDuckCon/index.html#celebrities",
+    "href": "posts/2024-08-20-PositDuckCon/index.html#celebrities",
+    "title": "Recap of Summer 2024 conference visits in Seattle, WA",
+    "section": "Celebrities",
+    "text": "Celebrities\nIn this section I fanboy over some of the amazing people that I met at Posit and DuckCon. Apologies if I forgot to mention you.\n\nPosit Conf\nIn the databases workshop, I was surrounded by several R celebrities including Eric Nantz (https://r-podcast.org/host/enantz/) and Tyler Morgan Wall (https://www.tylermw.com/), among many others! I was also lucky to have sat besides Joe Chang, Hadley Wickham, and JJ Allaire at lunch!\n\n\nDuckCon\n\nHannes Mühleisen and Mark Raasveldt, Co-founders of DuckDB.\n\nI was very fortunate to meet Hannes and Mark before and after the DuckCon talks. I regret not talking more about DuckDB internals with them, but I hope to meet you again soon Hannes and Mark!\n\nJordan Tigani, CEO of MotherDuck\n\nI was lucky to have sat beside Jordan at DuckCon. I got to pitch a few ideas to Jordan about doing matrix arithmetic with Motherduck, and hear more about the recent pivot from ‘hybrid execution’ to ‘dual execution’. Shoutout to Frances Perry from Motherduck who gave a great talk, showcasing several new features with Motherduck that I’d like to soon try out.\n\nDominik Moritz, creator of Mosaic and Prof at CMU\n\nBriefly met Dominik outside of the venue, huge fan of his work and hope to soon support ways to use Mosaic with dbverse objects\n\nAnd several others…\n\n\n\n\nFigure 2: Obligatory DuckCon speaker dinner selfie at Tavolàta Capitol Hill. Thanks Joe for the great dinner conversations!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "I am a research scientist with over ten years of experience in the fields of genomics, stem cells, and computational biology. My current research focuses on spatial omics and the development of open source software to analyze large-scale scientific datasets. You can learn more about my research on my Google Scholar page and my open source contributions on my GitHub or the Open Source page. I am currently a Hariri Institute Graduate Student Fellow and Ph.D. Candidate at Boston University in the Dries Lab."
+  },
+  {
+    "objectID": "index.html#blog-posts",
+    "href": "index.html#blog-posts",
+    "title": "",
+    "section": "Blog Posts",
+    "text": "Blog Posts"
+  },
+  {
+    "objectID": "oss/opensource.html#dbverse",
+    "href": "oss/opensource.html#dbverse",
+    "title": " Open Source",
+    "section": "dbverse",
+    "text": "dbverse\nI am the creator and lead developer of dbverse, a metalibrary for large-scale scientific data analysis in a database.\n\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\ndbverse \n\n\nAn ecosystem of database libraries for larger-than-memory scientific analytics. \n\n\nCreator\n\n\nSlides, Talk\n\n\n\n\ndbMatrix \n\n\nA database library for larger-than-memory matrix operations. \n\n\nCreator\n\n\n\n\n\n\n\ndbSpatial \n\n\nA database library for larger-than-memory spatial operations. \n\n\nCreator\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "oss/opensource.html#giotto-suite",
+    "href": "oss/opensource.html#giotto-suite",
+    "title": " Open Source",
+    "section": " Giotto Suite",
+    "text": "Giotto Suite\nI am a core contributor and co-developer of Giotto Suite, a modular suite of R packages for multi-scale and multi-omic spatial omics analysis.\n\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\nGiotto \n\n\nSpatial omics analysis toolbox \n\n\nCore Contributor\n\n\n\n\n\n\n\nGiottoClass \n\n\nGiotto object and subobject class definitions and frameworks \n\n\nCore Contributor\n\n\n\n\n\n\n\nGiottoUtils \n\n\nGiottoUtils exports functionalities that are called internally by many of the other packages in the Giotto ecosystem \n\n\nCore Contributor\n\n\n\n\n\n\n\nGiottoDB \n\n\nGiottoDB contains classes from the dbverse for working with larger-than-memory spatial omics data \n\n\nCo-creator, Core Contributor\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "oss/opensource.html#credit",
+    "href": "oss/opensource.html#credit",
+    "title": " Open Source",
+    "section": "Credit",
+    "text": "Credit\nThis page is heavily inspired by the page of the same name by Hamel Husain."
+  }
+]
