@@ -6,3 +6,15 @@ freeze: true
 
 # Enable banner style title blocks
 title-block-banner: true
+
+comments:
+  giscus:
+    repo: Ed2uiz/Ed2uiz_site
+    repo-id: R_kgDOMmFRTg
+    category: Announcements
+    category-id: DIC_kwDOMmFRTs4Ch0C3
+    mapping: pathname
+    reactions-enabled: true
+    input-position: bottom
+    theme: dark_tritanopia
+    language: en
