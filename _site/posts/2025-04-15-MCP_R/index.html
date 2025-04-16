@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Eddie Ruiz">
+<meta name="dcterms.date" content="2025-04-15">
+
+<title>Agentic Programming with R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand navbar-dark ">
+      <div class="navbar-container container-fluid">
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../oss/opensource.html" rel="" target="">
+ <span class="menu-text">Open Source</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv.html" rel="" target="">
+ <span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+          <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Ed2uiz" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/Ed2uiz" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          <div class="quarto-navbar-tools">
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Agentic Programming with R</h1>
+            <p class="subtitle lead">A First Look and Guide to Using the Model Context Protocol (MCP) in R with {ClaudeR}</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">blog</div>
+                <div class="quarto-category">MCP</div>
+                <div class="quarto-category">AI</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Eddie Ruiz </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 15, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#intro" id="toc-intro" class="nav-link active" data-scroll-target="#intro">Intro</a></li>
+  <li><a href="#background-mcp-and-agentic-programming" id="toc-background-mcp-and-agentic-programming" class="nav-link" data-scroll-target="#background-mcp-and-agentic-programming">Background: MCP and Agentic Programming</a>
+  <ul class="collapse">
+  <li><a href="#how-does-mcp-impact-programming-and-data-analysis" id="toc-how-does-mcp-impact-programming-and-data-analysis" class="nav-link" data-scroll-target="#how-does-mcp-impact-programming-and-data-analysis">How does MCP impact programming and data analysis?</a>
+  <ul class="collapse">
+  <li><a href="#before-mcp-procedural-programming-with-llms" id="toc-before-mcp-procedural-programming-with-llms" class="nav-link" data-scroll-target="#before-mcp-procedural-programming-with-llms">Before MCP: Procedural Programming with LLMs</a></li>
+  <li><a href="#after-mcp-agentic-programming" id="toc-after-mcp-agentic-programming" class="nav-link" data-scroll-target="#after-mcp-agentic-programming">After MCP: Agentic Programming</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#getting-started-with-agentic-programming-in-r" id="toc-getting-started-with-agentic-programming-in-r" class="nav-link" data-scroll-target="#getting-started-with-agentic-programming-in-r">Getting Started with Agentic Programming in R</a>
+  <ul class="collapse">
+  <li><a href="#installing-the-clauder-package" id="toc-installing-the-clauder-package" class="nav-link" data-scroll-target="#installing-the-clauder-package">Installing the {ClaudeR} package</a></li>
+  <li><a href="#connecting-your-llm-client-to-the-r-studio-mcp-server" id="toc-connecting-your-llm-client-to-the-r-studio-mcp-server" class="nav-link" data-scroll-target="#connecting-your-llm-client-to-the-r-studio-mcp-server">Connecting your LLM client to the r-studio MCP Server</a>
+  <ul class="collapse">
+  <li><a href="#claude-desktop" id="toc-claude-desktop" class="nav-link" data-scroll-target="#claude-desktop">Claude Desktop</a></li>
+  <li><a href="#cursor" id="toc-cursor" class="nav-link" data-scroll-target="#cursor">Cursor</a></li>
+  <li><a href="#visual-studio-code" id="toc-visual-studio-code" class="nav-link" data-scroll-target="#visual-studio-code">Visual Studio Code</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
+  <li><a href="#recommendations-on-using-clauder" id="toc-recommendations-on-using-clauder" class="nav-link" data-scroll-target="#recommendations-on-using-clauder">Recommendations on Using {ClaudeR}</a></li>
+  <li><a href="#early-recommendations-on-agentic-programming-in-r" id="toc-early-recommendations-on-agentic-programming-in-r" class="nav-link" data-scroll-target="#early-recommendations-on-agentic-programming-in-r">Early Recommendations on Agentic Programming in R</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#open-questions" id="toc-open-questions" class="nav-link" data-scroll-target="#open-questions">Open Questions</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="matrix-agent.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>“Never send a human to do a machine’s job” - Agent Smith, <em>The Matrix (</em>1999)</p>
+</blockquote>
+<section id="intro" class="level1">
+<h1>Intro</h1>
+<p>In this post, I provide a brief overview of the Model Context Protocol (MCP) and how to use it with Rstudio using the {ClaudeR} package. I share my initial thoughts on agentic programming with R using Claude, VS Code, and Cursor. This post is intended to be a short guide for my colleagues and others for getting started with using MCP in R/Rstudio. This is <em>not</em> a deep dive into MCP, agents, nor the {ClaudeR} package.</p>
+</section>
+<section id="background-mcp-and-agentic-programming" class="level1">
+<h1>Background: MCP and Agentic Programming</h1>
+<p><a href="https://docs.anthropic.com/en/docs/agents-and-tools/mcp">The Model Context Protocol (MCP)</a> is a recently developed software specification that standardizes the way large language models (LLMs) connect to existing software (e.g.&nbsp;RStudio). LLMs that support MCP can now operate tools or software applications as <strong>Agents</strong> to complete specific tasks autonomously!</p>
+<section id="how-does-mcp-impact-programming-and-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="how-does-mcp-impact-programming-and-data-analysis">How does MCP impact programming and data analysis?</h2>
+<p>In order to understand how MCP impacts programming and data analysis, we need to understand how most programmers and data scientists (myself included) used LLMs before MCP. Traditionally, we would use LLMs to generate (or debug) code and then copy and run that code in our IDE (e.g.&nbsp;RStudio, Jupyter Lab, etc.). This process was often tedious and error-prone, as we had to manually fix any errors or typos in code that the LLM provided (e.g.&nbsp;incorrect args or object names). To help illustrate this further, below are two examples that contrast the two approaches to programming with LLMs before and after MCP.</p>
+<section id="before-mcp-procedural-programming-with-llms" class="level3">
+<h3 class="anchored" data-anchor-id="before-mcp-procedural-programming-with-llms">Before MCP: Procedural Programming with LLMs</h3>
+<ul>
+<li>You ask an LLM on perplexity/claude/chatgpt to help write and improve your code. You copy the revised code into your IDE after ‘carefully’ reviewing it. After running the code (hoping that it works), you then copy the outputs/errors from your IDE and paste them back to the LLM. You repeat this tedious process until you finish the specific task. For those with limited programming experience, this kind of process could take several iterations and require consistent feedback with the LLM. It’s an imperfect process that is often frustrating and time-consuming.</li>
+</ul>
+</section>
+<section id="after-mcp-agentic-programming" class="level3">
+<h3 class="anchored" data-anchor-id="after-mcp-agentic-programming">After MCP: Agentic Programming</h3>
+<ul>
+<li><p>LLMs can now act autonomously as Agents.</p></li>
+<li><p>I ask the Agent to perform a task (e.g.&nbsp;create a scatterplot of the mtcars dataset) and it is able to perform the task autonomously with the right tool that is connected via an MCP server. Using {ClaudeR}, the Agent is made aware of the R objects, functions, and packages in the R environment in Rstudio. If there are any errors during a task, the Agent will automatically recognize them and revise its approach until the task is completed (or it encounters an error it cannot fix like a system issue or a connection timeout, more on this at the end).</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="getting-started-with-agentic-programming-in-r" class="level1">
+<h1>Getting Started with Agentic Programming in R</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="wakeup.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The following describes how to get started with agentic programming in R. First, we will install an R package that will setup an MCP server in an Rstudio application. Then, we will connect to that MCP server using Claude Desktop, VS Code, or Cursor.</p>
+<p>Before moving forward, please be sure to ⭐️ the excellent <a href="https://github.com/IMNMV/ClaudeR">{ClaudeR} repo</a> to show your support for the developer.</p>
+<section id="installing-the-clauder-package" class="level2">
+<h2 class="anchored" data-anchor-id="installing-the-clauder-package">Installing the {ClaudeR} package</h2>
+<p>The {ClaudeR} package is a wrapper for the MCP API that allows Agents to use Rstudio. As of today (April 15, 2025), it is the only R package that I am aware of that integrates Rstudio/Positron with MCP. I am betting that we will see more ‘official’ R packages from Posit or cynkra in the coming weeks that will provide additional ways to use MCP in Positron and specific R packages.</p>
+<p>{ClaudeR} requires minimal R packages and two python modules to operate. To get started, follow these steps which are adapted from the {ClaudeR} README.</p>
+<ol type="1">
+<li>Install the {ClaudeR} package from GitHub</li>
+</ol>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-1_dd004a2ae3cb2c9125eff16564574ba6">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"IMNMV/ClaudeR"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>Install Python dependencies</li>
+</ol>
+<p>{ClaudeR} requires two python modules <code>mcp</code> and <code>httpx</code>. Before installing these, I highly recommend using <code>venv</code> or <code>conda</code> to create a virtual environment in your terminal. This will help avoid any conflicts with existing python packages, but this is not necessary</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-2_0a6c464284f053e7301bcca550c5ea5e">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># beforethis, you can also create a virtual or conda environment</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>pip install mcp httpx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>Start the MCP Server in Rstudio</li>
+</ol>
+<p>To start the MCP Server in RStudio, {ClaudeR} provides a convenient Shiny interface that is demonstrated below. Prior to running this command, you can load other R packages and files that you want to expose to your Agent. After starting the server, your R console will be locked until the server is stopped.</p>
+<p><em>Note: This server runs on your local computer and communicates between applications, it does not send any data to the cloud or a remote server.</em></p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-3_218331bbb5a7c04492a8afda40ff4323">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ClaudeR)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Start the MCP server in Rstudio, a Shiny app will open in the Viewer pane</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>ClaudeR<span class="sc">::</span><span class="fu">claudeAddin</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="server.png" class="img-fluid"></p>
+<p>After running the above function, you will be prompted with a Shiny app with several options. Starting from top to bottom:</p>
+<ul>
+<li><code>Port</code>: This number controls where the MCP server address will be created. You should leave this as is.</li>
+<li><code>Print code to console before execution</code>: This option will show the R code that the Agent creates in the Console of the Rstudio pane.</li>
+<li><code>Log code to file</code>: This option will create a text file that keeps track of the R code that the Agent creates. This is useful for debugging and understanding how the Agent is performing tasks. I highly recommend keeping this option on to enable reproducibility and code review.</li>
+</ul>
+<p>Press the blue <code>Start Server</code> button to start the MCP Server. This will create a local HTTP server (in python) that will allow the Agent to run R commands in Rstudio.</p>
+</section>
+<section id="connecting-your-llm-client-to-the-r-studio-mcp-server" class="level2">
+<h2 class="anchored" data-anchor-id="connecting-your-llm-client-to-the-r-studio-mcp-server">Connecting your LLM client to the r-studio MCP Server</h2>
+<p>After starting the MCP server in the Rstudio application, we will next connect it with our LLM client of choice. Below, I show how to do this with Claude Desktop, Visual Studio Code, and Cursor. In my opinion, VS Code and Cursor are superior to Claude Desktop for programming purposes (more on thought at the end of this post).</p>
+<p>In order for each LLM client to connect to the MCP server in Rstudio, we need to first complete the following config information that is stored in a json file.</p>
+<p>Copy the below into a text editor.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-4_ae7154a82c074bf4421a24437e206a1a">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"mcpServers"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"r-studio"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"python"</span><span class="fu">,</span>  <span class="er">#</span> <span class="er">Or</span> <span class="er">full</span> <span class="er">path</span> <span class="er">to</span> <span class="er">your</span> <span class="er">Python</span> <span class="er">executable</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"args"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"PATH_TO_REPOSITORY/ClaudeR/scripts/persistent_r_mcp.py"</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"env"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"PYTHONPATH"</span><span class="fu">:</span> <span class="st">"PATH_TO_PYTHON_SITE_PACKAGES"</span><span class="fu">,</span>  <span class="er">#</span> <span class="er">Optional</span> <span class="er">if</span> <span class="er">using</span> <span class="er">system</span> <span class="er">Python</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"PYTHONUNBUFFERED"</span><span class="fu">:</span> <span class="st">"1"</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><code>PATH_TO_REPOSITORY</code>: Replace this with the output of the R command <code>find.package("ClaudeR")</code>.</li>
+<li><code>PATH_TO_PYTHON_SITE_PACKAGES</code>: Replace this with the output of <code>python -c "import site; print(site.getsitepackages()[0])"</code>. Run this in your terminal. If you used a virtual python environment, make sure it is activated when you run this command.</li>
+</ul>
+<p>This is what my config json file looked like (I am using MacOS).</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-5_464072bb8e27a82b05aec33b66073703">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"mcpServers"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"r-studio"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"/Users/user/claude_envs/claue_r_env/bin/python"</span><span class="fu">,</span> <span class="er">#</span> <span class="er">Note</span><span class="fu">:</span> <span class="er">I</span> <span class="er">used</span> <span class="er">a</span> <span class="er">virtual</span> <span class="er">env</span> <span class="er">to</span> <span class="er">install</span> <span class="er">the</span> <span class="er">python</span> <span class="er">dependencies</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"args"</span><span class="er">:</span> <span class="ot">[</span><span class="st">"/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/ClaudeR/scripts/persistent_r_mcp.py"</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"env"</span><span class="fu">:</span> <span class="fu">{</span> <span class="er">#</span> <span class="er">Note</span> <span class="er">I</span> <span class="er">removed</span> <span class="er">PYTHONPATH</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"PYTHONUNBUFFERED"</span><span class="fu">:</span> <span class="st">"1"</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Next, we will save this config info as a file to our LLM client of choice. The location and name of this file varies by LLM client. So below I show how to add this file to three different LLM clients: Claude Desktop, Visual Studio Code, and Cursor.</p>
+<section id="claude-desktop" class="level3">
+<h3 class="anchored" data-anchor-id="claude-desktop">Claude Desktop</h3>
+<p>Open the Claude Desktop app and navigate to the settings. On the left you should see <code>Developer&gt;Edit Config</code>. Paste the above config information in the <code>claude_desktop_config.json</code> file. If you do not see this option, upgrade your Desktop application.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="claude-config.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>If all is successful, you should see that Claude recognizes the following commands from the r-studio serving (make sure the server is running in Rstudio). If you are seeing errors, you will need to revisit the config file. See the README in the {ClaudeR} package for troubleshooting tips.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="claude-mcp.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="cursor" class="level3">
+<h3 class="anchored" data-anchor-id="cursor">Cursor</h3>
+<p>Open the Cursor application and navigate to the Cursor settings. On the left you should see <code>MCP</code>. Click on the blue box on the top right <code>Add new global MCP server</code> and copy your config json info from above to the <code>mcp.json</code> file that opens.</p>
+<p><em>Note: If you do not see <code>MCP</code> in settings you may need to upgrade Cursor. I am using Cursor <code>Version: 0.48.8</code>.</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cursor-mcp.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="visual-studio-code" class="level3">
+<h3 class="anchored" data-anchor-id="visual-studio-code">Visual Studio Code</h3>
+<p>In VS Code’s March 2025 release, support for working with MCP servers and various LLMs (including local LLMs) was added. You can enable this feature by opening VS Code settings, and enabling Chat &gt; Agent feature.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="vscode-agent.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><em>Note: If you do not see the above feature in your settings, ensure you are running Visual Studio Code <code>Version: 1.99.2 (Universal)</code> or higher.</em></p>
+<p>VSCode will automatically detect MCP Servers on your local machine, as shown here.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="vscode-mcp.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="demo" class="level1">
+<h1>Demo</h1>
+<p>Instead of creating my own demo of {ClaudeR}, I’m going to plug the original Youtube video created by the {ClaudeR} developer shown below using Claude Desktop. <em>Note: there is no sound.</em></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/KSKcuxRSZDY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="recommendations-on-using-clauder" class="level1">
+<h1>Recommendations on Using {ClaudeR}</h1>
+<p>Below are some general recommendations I have when using {ClaudeR}.</p>
+<ul>
+<li>Load R packages and objects prior to starting the MCP server. This will allow the Agent to contextualize these packages and objects before performing tasks.</li>
+<li>Install R packages that you need beforehand, as installation can lead to errors that the Agent cannot easily fix. This may require you to stop the server and install the packages manually.</li>
+</ul>
+</section>
+<section id="early-recommendations-on-agentic-programming-in-r" class="level1">
+<h1>Early Recommendations on Agentic Programming in R</h1>
+<p>Moving from procedural programming to agentic programming is still a new concept to many people, myself included. I’ve found the blog post from Paul Simmering on <a href="https://simmering.dev/blog/agentic-ai/#not-every-workflow-needs-agentic-ai">when not to use Agentic AI</a> and Anthropic’s blog post on <a href="https://www.anthropic.com/engineering/building-effective-agents">Building effective agents</a> to be insightful on some of the emerging best practices.</p>
+<p>Here are my early recommendations for using Agents for exploratory data analysis and R programming:</p>
+<ol type="1">
+<li>Before doing any programming with Agents, create a project management file to organize all of the tasks you want the Agent to accomplish. Be as explicit as possible. This file can be a simple text file or a markdown file. Create an ID for each task that you want the Agent to complete, the description of the task, and the expected outcome. You can ask the Agent to create this document and prompt the Agent to review this file before each task. This serves as a way to ensure the Agent is aligned with your expectations for the task. You can also add specific requests to this document like using specific packages, syntax, and functions. For example, I asked it to save .RDS files to recreate the outputs of each task.</li>
+<li>As the Agent completes tasks, ask it to mark which tasks it has completed in the project management file. To ensure the Agent does not encounter the <a href="https://simmering.dev/blog/agentic-ai/#compounding-error-problem">compounding error problem</a>, it may be best to ask it to complete one task at a time. This will also help you understand how the Agent is performing tasks before moving onto others and spot any possible issues with its approach. This is where it becomes very important to have a well-defined project management file and to anticipate errors that may occur.</li>
+<li>Use <code>git</code> to track task completion. If you don’t know how to use git yet, what are ya doin? Learn git! After each task is completed, create a commit with a message that describes what the Agent did. I also include the log files that are generated by {ClaudeR} so I can refer to the code that was used for the specific task. I can now perform audits/reviews for specific tasks. For this reason, I highly recommend using an LLM client like Cursor or VS Code that has built-in support for version controlling with git, as opposed to the Claude Desktop client.</li>
+<li>Know the training limits of your LLM. For example, certain LLMs have been trained on information from the web up to a certain date. This means that it may miss important information about a package or function. As of this writing, my go to LLM is Claude 3.7.</li>
+<li>Use <a href="https://gitingest.com/">gitingest</a> to take github repositories and turn them into a file that you can give to your Agent. This can dramatically improve your Agent’s performance.</li>
+</ol>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="neo-is-sleeping-matrix.gif" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>After using Agents for the last week for R programming-related tasks, I have radically changed the way I think about programming and performing exploratory data analysis. Agents have the potential to dramatically improve research and accelerate biological discovery. <a href="https://www.biorxiv.org/content/10.1101/2025.04.03.646459v1">SpatialAgent</a> seems to be an early examples of this. Aside from experienced programmers, perhaps the next biggest winners of agentic programming will be domain experts who never programmed before. For example, experimental scientists who are now equipped with the ability to test interesting hypotheses and generate plots with simple prompts. While I’m excited to see what great things Agents will accomplish with (and without) humans, I’m also concerned about the possible negative impacts they will have on many jobs in the coming months. I also feel for the many restless nights spent by programmers and data scientists who are now competing with Agents for jobs. I think the best way to think about Agents is as a tool that can be used to augment human capabilities, not replace them. This will allow us to take advantage of their strengths while still being able to apply your own unique expertise and judgment.</p>
+</section>
+<section id="open-questions" class="level1">
+<h1>Open Questions</h1>
+<ul>
+<li><p>How have you been using Agents in your research or programming projects?</p></li>
+<li><p>What recommendations or tips do you have for using Agents for programming?</p></li>
+<li><p>How do you think Agents will impact work/research practices (if at all)?</p></li>
+<li><p>When do you think procedural programming should be used over agentic programming?</p></li>
+<li><p>What is the best way to audit code generated by agents? How will the influx of Agent-generated code be reviewed, audited, and reported?</p></li>
+<li><p>What IDEs and LLMs have you found to be best for agentic programming?</p></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="Ed2uiz/Ed2uiz_site" data-repo-id="R_kgDOMmFRTg" data-category="Announcements" data-category-id="DIC_kwDOMmFRTs4Ch0C3" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark_tritanopia" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
