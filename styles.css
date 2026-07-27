@@ -1,1 +1,12 @@
-/* css styles */
+/* Keep repository badges consistently below project names. */
+a.project.listing-project {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+a.project.listing-project > img {
+  display: block;
+  margin: 0;
+}

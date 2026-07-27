@@ -26,7 +26,7 @@
   description: |
     GiottoDB contains classes from the dbverse for working with larger-than-memory spatial omics data
 
-- project: "GiottoSeq ![GitHub Repo stars](https://img.shields.io/github/stars/giotto-suite/GiottoSeq?style=social)"
+- project: "GiottoSeq"
   path: https://github.com/giotto-suite/GiottoSeq
   role: Core Contributor
   other: ""

@@ -46,7 +46,7 @@ listing:
 
 ## dbverse
 
-I am the creator and lead developer of  [dbverse](https://github.com/drieslab/dbverse), a metalibrary for large-scale scientific data analysis in a database.
+I am the creator and lead developer of [dbverse](https://github.com/dbverse-org), a metalibrary for large-scale scientific data analysis in a database.
 
 ::: {#dbverse-listings}
 :::
