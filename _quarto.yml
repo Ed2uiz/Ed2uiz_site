@@ -13,8 +13,6 @@ website:
       href: index.qmd
     - text: Open Source
       file: oss/opensource.qmd
-    - text: CV
-      href: cv.qmd
     right:
       - text: Contact
         file: about.qmd
