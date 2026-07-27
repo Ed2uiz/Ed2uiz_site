@@ -22,7 +22,7 @@ website:
         href: https://twitter.com/Ed2uiz
 format:
   html:
-    theme: Darkly
+    theme: darkly
     css: styles.css
 
 editor: source
