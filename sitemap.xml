@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Ed2uiz.github.io/Ed2uiz_site/cv.html</loc>
-    <lastmod>2025-04-16T02:32:28.894Z</lastmod>
+    <loc>https://ed2.dev/index.html</loc>
+    <lastmod>2026-07-27T19:17:30.574Z</lastmod>
   </url>
   <url>
-    <loc>https://Ed2uiz.github.io/Ed2uiz_site/about.html</loc>
-    <lastmod>2025-04-16T02:32:28.308Z</lastmod>
+    <loc>https://ed2.dev/posts/2025-04-15-MCP_R/index.html</loc>
+    <lastmod>2026-07-27T19:17:30.580Z</lastmod>
   </url>
   <url>
-    <loc>https://Ed2uiz.github.io/Ed2uiz_site/talks/talks.html</loc>
-    <lastmod>2025-04-16T02:32:27.654Z</lastmod>
+    <loc>https://ed2.dev/oss/opensource.html</loc>
+    <lastmod>2026-07-27T19:17:30.574Z</lastmod>
   </url>
   <url>
-    <loc>https://Ed2uiz.github.io/Ed2uiz_site/posts/2025-04-15-MCP_R/index.html</loc>
-    <lastmod>2025-04-16T02:32:26.837Z</lastmod>
+    <loc>https://ed2.dev/talks/talks.html</loc>
+    <lastmod>2026-07-27T19:17:30.593Z</lastmod>
   </url>
   <url>
-    <loc>https://Ed2uiz.github.io/Ed2uiz_site/posts/welcome/index.html</loc>
-    <lastmod>2025-04-16T02:32:25.884Z</lastmod>
+    <loc>https://ed2.dev/about.html</loc>
+    <lastmod>2026-07-27T19:17:30.573Z</lastmod>
   </url>
   <url>
-    <loc>https://Ed2uiz.github.io/Ed2uiz_site/posts/2024-08-20-PositDuckCon/index.html</loc>
-    <lastmod>2025-04-16T02:32:27.400Z</lastmod>
+    <loc>https://ed2.dev/cv.html</loc>
+    <lastmod>2026-07-27T19:17:30.573Z</lastmod>
   </url>
   <url>
-    <loc>https://Ed2uiz.github.io/Ed2uiz_site/index.html</loc>
-    <lastmod>2025-04-16T02:32:28.053Z</lastmod>
+    <loc>https://ed2.dev/posts/welcome/index.html</loc>
+    <lastmod>2026-07-27T19:17:30.593Z</lastmod>
   </url>
   <url>
-    <loc>https://Ed2uiz.github.io/Ed2uiz_site/oss/opensource.html</loc>
-    <lastmod>2025-04-16T02:32:28.658Z</lastmod>
+    <loc>https://ed2.dev/posts/2024-08-20-PositDuckCon/index.html</loc>
+    <lastmod>2026-07-27T19:17:30.576Z</lastmod>
   </url>
 </urlset>

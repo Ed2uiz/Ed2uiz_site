@@ -1,24 +1,17 @@
 [
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "TODO",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
     "section": "",
-    "text": "TODO"
+    "text": "I am a research scientist with over ten years of experience in the fields of genomics, stem cells, and computational biology. My current research focuses on spatial omics and the development of open source software to analyze large-scale scientific datasets. You can learn more about my research on my Google Scholar page and my open source contributions on my GitHub or the Open Source page. I am currently a Postdoctoral Fellow in the Dries Lab, where I previously completed my Ph.D. at Boston University as a Hariri Institute Graduate Student Fellow."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Contact",
-    "section": "",
-    "text": "Happy to chat about any matters regarding my research or past work. I’m particularly interested in connecting with other researchers or scientists, feel free to email or DM me with any questions!"
-  },
-  {
-    "objectID": "talks/talks.html",
-    "href": "talks/talks.html",
-    "title": "2024",
-    "section": "",
-    "text": "Running list of talks, seminars, or presentations that I’ve given.\n\n2024\n\ndbverse: composable database libraries for larger-than-memory scientific analytics, DuckCon 2024, Seattle, WA. August 2024"
+    "objectID": "index.html#blog-posts",
+    "href": "index.html#blog-posts",
+    "title": "",
+    "section": "Blog Posts",
+    "text": "Blog Posts"
   },
   {
     "objectID": "posts/2025-04-15-MCP_R/index.html#how-does-mcp-impact-programming-and-data-analysis",
@@ -40,6 +33,48 @@
     "title": "Agentic Programming with R",
     "section": "Connecting your LLM client to the r-studio MCP Server",
     "text": "Connecting your LLM client to the r-studio MCP Server\nAfter starting the MCP server in the Rstudio application, we will next connect it with our LLM client of choice. Below, I show how to do this with Claude Desktop, Visual Studio Code, and Cursor. In my opinion, VS Code and Cursor are superior to Claude Desktop for programming purposes (more on thought at the end of this post).\nIn order for each LLM client to connect to the MCP server in Rstudio, we need to first complete the following config information that is stored in a json file.\nCopy the below into a text editor.\n\n{\n  \"mcpServers\": {\n    \"r-studio\": {\n      \"command\": \"python\",  # Or full path to your Python executable\n      \"args\": [\"PATH_TO_REPOSITORY/ClaudeR/scripts/persistent_r_mcp.py\"],\n      \"env\": {\n        \"PYTHONPATH\": \"PATH_TO_PYTHON_SITE_PACKAGES\",  # Optional if using system Python\n        \"PYTHONUNBUFFERED\": \"1\"\n      }\n    }\n  }\n}\n\n\nPATH_TO_REPOSITORY: Replace this with the output of the R command find.package(\"ClaudeR\").\nPATH_TO_PYTHON_SITE_PACKAGES: Replace this with the output of python -c \"import site; print(site.getsitepackages()[0])\". Run this in your terminal. If you used a virtual python environment, make sure it is activated when you run this command.\n\nThis is what my config json file looked like (I am using MacOS).\n\n{\n  \"mcpServers\": {\n    \"r-studio\": {\n      \"command\": \"/Users/user/claude_envs/claue_r_env/bin/python\", # Note: I used a virtual env to install the python dependencies\n      \"args\": [\"/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/ClaudeR/scripts/persistent_r_mcp.py\"],\n      \"env\": { # Note I removed PYTHONPATH\n        \"PYTHONUNBUFFERED\": \"1\"\n      }\n    }\n  }\n}\n\nNext, we will save this config info as a file to our LLM client of choice. The location and name of this file varies by LLM client. So below I show how to add this file to three different LLM clients: Claude Desktop, Visual Studio Code, and Cursor.\n\nClaude Desktop\nOpen the Claude Desktop app and navigate to the settings. On the left you should see Developer&gt;Edit Config. Paste the above config information in the claude_desktop_config.json file. If you do not see this option, upgrade your Desktop application.\n\n\n\n\n\nIf all is successful, you should see that Claude recognizes the following commands from the r-studio serving (make sure the server is running in Rstudio). If you are seeing errors, you will need to revisit the config file. See the README in the {ClaudeR} package for troubleshooting tips.\n\n\n\n\n\n\n\nCursor\nOpen the Cursor application and navigate to the Cursor settings. On the left you should see MCP. Click on the blue box on the top right Add new global MCP server and copy your config json info from above to the mcp.json file that opens.\nNote: If you do not see MCP in settings you may need to upgrade Cursor. I am using Cursor Version: 0.48.8.\n\n\n\n\n\n\n\nVisual Studio Code\nIn VS Code’s March 2025 release, support for working with MCP servers and various LLMs (including local LLMs) was added. You can enable this feature by opening VS Code settings, and enabling Chat &gt; Agent feature.\n\n\n\n\n\nNote: If you do not see the above feature in your settings, ensure you are running Visual Studio Code Version: 1.99.2 (Universal) or higher.\nVSCode will automatically detect MCP Servers on your local machine, as shown here."
+  },
+  {
+    "objectID": "oss/opensource.html#dbverse",
+    "href": "oss/opensource.html#dbverse",
+    "title": " Open Source",
+    "section": "dbverse",
+    "text": "dbverse\nI am the creator and lead developer of dbverse, a metalibrary for large-scale scientific data analysis in a database.\n\n\n\n\n\n\nProject\n\n\n\nDescription\n\n\n\nRole\n\n\n\nOther References\n\n\n\n\n\n\n\n\ndbverse \n\n\nAn ecosystem of database libraries for larger-than-memory scientific analytics. \n\n\nCreator\n\n\nSlides, Talk\n\n\n\n\n\n\ndbMatrix \n\n\nA database library for larger-than-memory matrix operations. \n\n\nCreator\n\n\n \n\n\n\n\n\n\ndbSpatial \n\n\nA database library for larger-than-memory spatial operations. \n\n\nCreator\n\n\n \n\n\n\n\n\n\ndbProject \n\n\nA database-backed framework for organizing and managing scientific analysis projects. \n\n\nCreator\n\n\n \n\n\n\n\n\n\ndbSequence \n\n\nA database library for working with large-scale sequence data. \n\n\nCreator\n\n\n \n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "oss/opensource.html#giotto-suite",
+    "href": "oss/opensource.html#giotto-suite",
+    "title": " Open Source",
+    "section": " Giotto Suite",
+    "text": "Giotto Suite\nI am a core contributor and co-developer of Giotto Suite, a modular suite of R packages for multi-scale and multi-omic spatial analysis.\n\n\n\n\n\n\nProject\n\n\n\nDescription\n\n\n\nRole\n\n\n\nOther References\n\n\n\n\n\n\n\n\nGiotto \n\n\nSpatial omics analysis toolbox \n\n\nCore Contributor\n\n\n \n\n\n\n\n\n\nGiottoClass \n\n\nGiotto object and subobject class definitions and frameworks \n\n\nCore Contributor\n\n\n \n\n\n\n\n\n\nGiottoUtils \n\n\nGiottoUtils exports functionalities that are called internally by many of the other packages in the Giotto ecosystem \n\n\nCore Contributor\n\n\n \n\n\n\n\n\n\nGiottoDB \n\n\nGiottoDB contains classes from the dbverse for working with larger-than-memory spatial omics data \n\n\nCo-creator, Core Contributor\n\n\n \n\n\n\n\n\n\nGiottoSeq \n\n\nA Giotto Suite package for sequence data analysis. \n\n\nCore Contributor\n\n\n \n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "oss/opensource.html#credit",
+    "href": "oss/opensource.html#credit",
+    "title": " Open Source",
+    "section": "Credit",
+    "text": "Credit\nThis page is heavily inspired by the page of the same name by Hamel Husain."
+  },
+  {
+    "objectID": "talks/talks.html",
+    "href": "talks/talks.html",
+    "title": "2024",
+    "section": "",
+    "text": "Running list of talks, seminars, or presentations that I’ve given.\n\n2024\n\ndbverse: composable database libraries for larger-than-memory scientific analytics, DuckCon 2024, Seattle, WA. August 2024"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Happy to chat about any matters regarding my research or past work. I’m particularly interested in connecting with other researchers or scientists, feel free to email or DM me with any questions!"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "TODO",
+    "section": "",
+    "text": "TODO"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -67,7 +102,7 @@
     "href": "posts/2024-08-20-PositDuckCon/index.html#highlight",
     "title": "Recap of Summer 2024 conference visits in Seattle, WA",
     "section": "Highlight",
-    "text": "Highlight\n\nEarlier in the week at the Posit Databases Workshop, I invited Kirill to my DuckCon talk. Unfortunately, he mentioned that there was a conflict with an R tidy event and so he would not likely be able to attend. To my surprise, I found Kirill after my talk at DuckCon! We managed to find some time to chat outside and I really enjoyed being able to discuss our projects in more detail. I thanked him for all of the incredible contributions he has made to R (i.e. maintaining the duckdb-r repo, creating duckplyr, and much more related to his work leading cynkra).\n\n\n\n\nFigure 1: Kirill Müller (right) and I (left) sporting Posit 2024 t-shirts at DuckCon #5 in Seattle, WA with another Posit workshop instructor (center)."
+    "text": "Highlight\n\nEarlier in the week at the Posit Databases Workshop, I invited Kirill to my DuckCon talk. Unfortunately, he mentioned that there was a conflict with an R tidy event and so he would not likely be able to attend. To my surprise, I found Kirill after my talk at DuckCon! We managed to find some time to chat outside and I really enjoyed being able to discuss our projects in more detail. I thanked him for all of the incredible contributions he has made to R (i.e. maintaining the duckdb-r repo, creating duckplyr, and much more related to his work leading cynkra).\n\n\n\n\n\n\n\nFigure 1: Kirill Müller (right) and I (left) sporting Posit 2024 t-shirts at DuckCon #5 in Seattle, WA with another Posit workshop instructor (center)."
   },
   {
     "objectID": "posts/2024-08-20-PositDuckCon/index.html#new-friends",
@@ -88,41 +123,6 @@
     "href": "posts/2024-08-20-PositDuckCon/index.html#celebrities",
     "title": "Recap of Summer 2024 conference visits in Seattle, WA",
     "section": "Celebrities",
-    "text": "Celebrities\nIn this section I fanboy over some of the amazing people that I met at Posit and DuckCon. Apologies if I forgot to mention you.\n\nPosit Conf\nIn the databases workshop, I was surrounded by several R celebrities including Eric Nantz (https://r-podcast.org/host/enantz/) and Tyler Morgan Wall (https://www.tylermw.com/), among many others! I was also lucky to have sat besides Joe Chang, Hadley Wickham, and JJ Allaire at lunch!\n\n\nDuckCon\n\nHannes Mühleisen and Mark Raasveldt, Co-founders of DuckDB.\n\nI was very fortunate to meet Hannes and Mark before and after the DuckCon talks. I regret not talking more about DuckDB internals with them, but I hope to meet you again soon Hannes and Mark!\n\nJordan Tigani, CEO of MotherDuck\n\nI was lucky to have sat beside Jordan at DuckCon. I got to pitch a few ideas to Jordan about doing matrix arithmetic with Motherduck, and hear more about the recent pivot from ‘hybrid execution’ to ‘dual execution’. Shoutout to Frances Perry from Motherduck who gave a great talk, showcasing several new features with Motherduck that I’d like to soon try out.\n\nDominik Moritz, creator of Mosaic and Prof at CMU\n\nBriefly met Dominik outside of the venue, huge fan of his work and hope to soon support ways to use Mosaic with dbverse objects\n\nAnd several others…\n\n\n\n\nFigure 2: Obligatory DuckCon speaker dinner selfie at Tavolàta Capitol Hill. Thanks Joe for the great dinner conversations!"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "",
-    "section": "",
-    "text": "I am a research scientist with over ten years of experience in the fields of genomics, stem cells, and computational biology. My current research focuses on spatial omics and the development of open source software to analyze large-scale scientific datasets. You can learn more about my research on my Google Scholar page and my open source contributions on my GitHub or the Open Source page. I am currently a Hariri Institute Graduate Student Fellow and Ph.D. Candidate at Boston University in the Dries Lab."
-  },
-  {
-    "objectID": "index.html#blog-posts",
-    "href": "index.html#blog-posts",
-    "title": "",
-    "section": "Blog Posts",
-    "text": "Blog Posts"
-  },
-  {
-    "objectID": "oss/opensource.html#dbverse",
-    "href": "oss/opensource.html#dbverse",
-    "title": " Open Source",
-    "section": "dbverse",
-    "text": "dbverse\nI am the creator and lead developer of dbverse, a metalibrary for large-scale scientific data analysis in a database.\n\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\ndbverse \n\n\nAn ecosystem of database libraries for larger-than-memory scientific analytics. \n\n\nCreator\n\n\nSlides, Talk\n\n\n\n\ndbMatrix \n\n\nA database library for larger-than-memory matrix operations. \n\n\nCreator\n\n\n\n\n\n\n\ndbSpatial \n\n\nA database library for larger-than-memory spatial operations. \n\n\nCreator\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "oss/opensource.html#giotto-suite",
-    "href": "oss/opensource.html#giotto-suite",
-    "title": " Open Source",
-    "section": " Giotto Suite",
-    "text": "Giotto Suite\nI am a core contributor and co-developer of Giotto Suite, a modular suite of R packages for multi-scale and multi-omic spatial analysis.\n\n\n\n\n\n\nProject\n\n\nDescription\n\n\nRole\n\n\nOther References\n\n\n\n\n\n\nGiotto \n\n\nSpatial omics analysis toolbox \n\n\nCore Contributor\n\n\n\n\n\n\n\nGiottoClass \n\n\nGiotto object and subobject class definitions and frameworks \n\n\nCore Contributor\n\n\n\n\n\n\n\nGiottoUtils \n\n\nGiottoUtils exports functionalities that are called internally by many of the other packages in the Giotto ecosystem \n\n\nCore Contributor\n\n\n\n\n\n\n\nGiottoDB \n\n\nGiottoDB contains classes from the dbverse for working with larger-than-memory spatial omics data \n\n\nCo-creator, Core Contributor\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "oss/opensource.html#credit",
-    "href": "oss/opensource.html#credit",
-    "title": " Open Source",
-    "section": "Credit",
-    "text": "Credit\nThis page is heavily inspired by the page of the same name by Hamel Husain."
+    "text": "Celebrities\nIn this section I fanboy over some of the amazing people that I met at Posit and DuckCon. Apologies if I forgot to mention you.\n\nPosit Conf\nIn the databases workshop, I was surrounded by several R celebrities including Eric Nantz (https://r-podcast.org/host/enantz/) and Tyler Morgan Wall (https://www.tylermw.com/), among many others! I was also lucky to have sat besides Joe Chang, Hadley Wickham, and JJ Allaire at lunch!\n\n\nDuckCon\n\nHannes Mühleisen and Mark Raasveldt, Co-founders of DuckDB.\n\nI was very fortunate to meet Hannes and Mark before and after the DuckCon talks. I regret not talking more about DuckDB internals with them, but I hope to meet you again soon Hannes and Mark!\n\nJordan Tigani, CEO of MotherDuck\n\nI was lucky to have sat beside Jordan at DuckCon. I got to pitch a few ideas to Jordan about doing matrix arithmetic with Motherduck, and hear more about the recent pivot from ‘hybrid execution’ to ‘dual execution’. Shoutout to Frances Perry from Motherduck who gave a great talk, showcasing several new features with Motherduck that I’d like to soon try out.\n\nDominik Moritz, creator of Mosaic and Prof at CMU\n\nBriefly met Dominik outside of the venue, huge fan of his work and hope to soon support ways to use Mosaic with dbverse objects\n\nAnd several others…\n\n\n\n\n\n\n\nFigure 2: Obligatory DuckCon speaker dinner selfie at Tavolàta Capitol Hill. Thanks Joe for the great dinner conversations!"
   }
 ]
