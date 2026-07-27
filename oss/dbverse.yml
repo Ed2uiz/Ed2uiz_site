@@ -18,3 +18,17 @@
   other: ""
   description: |
     A database library for larger-than-memory spatial operations.
+
+- project: "dbProject ![GitHub Repo stars](https://img.shields.io/github/stars/dbverse-org/dbproject-r?style=social)"
+  path: https://github.com/dbverse-org/dbproject-r
+  role: Creator
+  other: ""
+  description: |
+    A database-backed framework for organizing and managing scientific analysis projects.
+
+- project: "dbSequence ![GitHub Repo stars](https://img.shields.io/github/stars/dbverse-org/dbSequence?style=social)"
+  path: https://github.com/dbverse-org/dbSequence
+  role: Creator
+  other: ""
+  description: |
+    A database library for working with large-scale sequence data.

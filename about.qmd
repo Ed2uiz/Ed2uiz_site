@@ -1,6 +1,5 @@
 ---
 title: "Contact"
-image: portrait.jpg
 about:
   template: jolla
   links:
